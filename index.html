@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .chess-title {
+    font-size: 24px;
+    font-variant: small-caps;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
+  }
+
+  .chessboard-container{
+    border: 10px solid rgb(231, 189, 99);
+    inline-size: 50px;
+    width: auto;
+    height: auto;/* Double-layered border */
+  }
+
+  .chessboard {
+    border-collapse: collapse;
+    width: 500px;
+    height: 500px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1px px
+  }
+
+  .chessboard td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 0.3s; /* Add smooth transition */
+  }
+
+  .white {
+    background-color: white;
+  }
+
+  .black {
+    background-color: rgb(189, 222, 23);
+  }
+
+  .enlarge {
+    transform: scale(1.5, 1.5); /* Enlarge on hover (squarely) */
+  }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cells = document.querySelectorAll(".chessboard td");
+
+    cells.forEach((cell) => {
+      cell.addEventListener("mouseenter", () => {
+        cell.classList.add("enlarge");
+      });
+
+      cell.addEventListener("mouseleave", () => {
+        cell.classList.remove("enlarge");
+      });
+    });
+  });
+</script>
+</head>
+<body background="bg2.jpg">
+    <div class="chess-title"><h1 style="color: rgb(230, 154, 41);font-family: cursive;">Master the Mind!</h1></div>
+<div class="chessboard-container">
+  <table class="chessboard">
+    <tr>
+        <td class="black" id="a8" style="color: darkviolet;">♜</td>
+        <td class="white" id="b8"style="color: darkviolet;">♞</td>
+        <td class="black" id="c8"style="color: darkviolet;">♝</td>
+        <td class="white" id="d8"style="color: darkviolet;">♛</td>
+        <td class="black" id="e8"style="color: darkviolet;">♚</td>
+        <td class="white" id="f8"style="color: darkviolet;">♝</td>
+        <td class="black" id="g8"style="color: darkviolet;">♞</td>
+        <td class="white" id="h8"style="color: darkviolet;">♜</td>
+    </tr>
+      <tr>
+        <td class="white" id="a7"style="color: darkviolet;">♟</td>
+        <td class="black" id="b7"style="color: darkviolet;">♟</td>
+        <td class="white" id="c7"style="color: darkviolet;">♟</td>
+        <td class="black" id="d7"style="color: darkviolet;">♟</td>
+        <td class="white" id="e7"style="color: darkviolet;">♟</td>
+        <td class="black" id="f7"style="color: darkviolet;">♟</td>
+        <td class="white" id="g7"style="color: darkviolet;">♟</td>
+        <td class="black" id="h7"style="color: darkviolet;">♟</td>
+      </tr>
+      <tr>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+      </tr>
+    
+      <tr>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+      </tr>
+      <tr>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+      </tr>
+      <tr>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+        <td class="white" ></td>
+        <td class="black" ></td>
+      </tr>
+      <!-- ... Repeat rows for ranks 5 to 3 ... -->
+      <tr>
+        <td class="black" style="color: red;">♙</td>
+        <td class="white" style="color: red;">♙</td>
+        <td class="black" style="color: red;">♙</td>
+        <td class="white" style="color: red;">♙</td>
+        <td class="black" style="color: red;">♙</td>
+        <td class="white" style="color: red;">♙</td>
+        <td class="black" style="color: red;">♙</td>
+        <td class="white" style="color: red;">♙</td>
+      </tr>
+      <tr>
+        <td class="white" style="color: red;">♖</td>
+        <td class="black" style="color: red;">♘</td>
+        <td class="white" style="color: red;">♗</td>
+        <td class="black" style="color: red;">♕</td>
+        <td class="white" style="color: red;">♔</td>
+        <td class="black" style="color: red;">♗</td>
+        <td class="white" style="color: red;">♘</td>
+        <td class="black" style="color: red;">♖</td>
+      </tr>
+
+
+</table>
+</div>
+<br>
+</body>
+</html>
