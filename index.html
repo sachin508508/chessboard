@@ -27,7 +27,7 @@
     border: 10px solid rgb(231, 189, 99);
     inline-size: 50px;
     width: auto;
-    height: auto;/* Double-layered border */
+    height: auto;/* Double-layedarkgreen border */
   }
 
   .chessboard {
@@ -54,28 +54,13 @@
   }
 
   .black {
-    background-color: rgb(189, 222, 23);
+    background-color: rgb(245, 9, 28);
   }
 
-  .enlarge {
+  td:hover {
     transform: scale(1.5, 1.5); /* Enlarge on hover (squarely) */
   }
 </style>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const cells = document.querySelectorAll(".chessboard td");
-
-    cells.forEach((cell) => {
-      cell.addEventListener("mouseenter", () => {
-        cell.classList.add("enlarge");
-      });
-
-      cell.addEventListener("mouseleave", () => {
-        cell.classList.remove("enlarge");
-      });
-    });
-  });
-</script>
 </head>
 <body background="bg2.jpg">
     <div class="chess-title"><h1 style="color: rgb(230, 154, 41);font-family: cursive;">Master the Mind!</h1></div>
@@ -144,24 +129,24 @@ document.addEventListener("DOMContentLoaded", function () {
       </tr>
       <!-- ... Repeat rows for ranks 5 to 3 ... -->
       <tr>
-        <td class="black" style="color: red;">♙</td>
-        <td class="white" style="color: red;">♙</td>
-        <td class="black" style="color: red;">♙</td>
-        <td class="white" style="color: red;">♙</td>
-        <td class="black" style="color: red;">♙</td>
-        <td class="white" style="color: red;">♙</td>
-        <td class="black" style="color: red;">♙</td>
-        <td class="white" style="color: red;">♙</td>
+        <td class="black" style="color: darkgreen;">♙</td>
+        <td class="white" style="color: darkgreen;">♙</td>
+        <td class="black" style="color: darkgreen;">♙</td>
+        <td class="white" style="color: darkgreen;">♙</td>
+        <td class="black" style="color: darkgreen;">♙</td>
+        <td class="white" style="color: darkgreen;">♙</td>
+        <td class="black" style="color: darkgreen;">♙</td>
+        <td class="white" style="color: darkgreen;">♙</td>
       </tr>
       <tr>
-        <td class="white" style="color: red;">♖</td>
-        <td class="black" style="color: red;">♘</td>
-        <td class="white" style="color: red;">♗</td>
-        <td class="black" style="color: red;">♕</td>
-        <td class="white" style="color: red;">♔</td>
-        <td class="black" style="color: red;">♗</td>
-        <td class="white" style="color: red;">♘</td>
-        <td class="black" style="color: red;">♖</td>
+        <td class="white" style="color: darkgreen;">♖</td>
+        <td class="black" style="color: darkgreen;">♘</td>
+        <td class="white" style="color: darkgreen;">♗</td>
+        <td class="black" style="color: darkgreen;">♕</td>
+        <td class="white" style="color: darkgreen;">♔</td>
+        <td class="black" style="color: darkgreen;">♗</td>
+        <td class="white" style="color: darkgreen;">♘</td>
+        <td class="black" style="color: darkgreen;">♖</td>
       </tr>
 
 
