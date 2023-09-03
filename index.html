@@ -8,26 +8,23 @@
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    margin-top: 0;
     flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-repeat: no-repeat;    
+    background-image: url('bg1.jpg');
+    background-size: cover;
   }
 
-  .chess-title {
-    font-size: 24px;
-    font-variant: small-caps;
-    font-style: italic;
-    font-weight: bold;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    
-  }
+
 
   .chessboard-container{
-    border: 10px solid rgb(231, 189, 99);
+    border: 20px solid darkblue ;
     inline-size: 50px;
     width: auto;
-    height: auto;/* Double-layedarkgreen border */
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;/* Double-layergb(8, 240, 8) border */
   }
 
   .chessboard {
@@ -40,8 +37,8 @@
   }
 
   .chessboard td {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     vertical-align: middle;
     font-size: 30px;
@@ -50,41 +47,58 @@
   }
 
   .white {
-    background-color: white;
+    background-color: rgb(6, 9, 11);
   }
 
   .black {
-    background-color: rgb(245, 9, 28);
+    background-color: #fac115;
   }
 
   td:hover {
-    transform: scale(1.5, 1.5); /* Enlarge on hover (squarely) */
+    transform: scale(1.3, 1.3); /* Enlarge on hover (squarely) */
   }
+
 </style>
 </head>
-<body background="bg2.jpg">
-    <div class="chess-title"><h1 style="color: rgb(230, 154, 41);font-family: cursive;">Master the Mind!</h1></div>
-<div class="chessboard-container">
+<body>
+   <header style="
+   font-size: 50px;
+   font-family: cursive; 
+ top: 0;
+ text-align: center;    
+ z-index: 9999;
+ background-image: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33cc33, #3399ff, #9900ff, #ff3399);
+ background-clip: text;
+ -webkit-background-clip: text;
+ color: transparent;
+ line-height: 1;
+ text-align: center;
+ text-fill-color:transparent;"
+>
+    Master the board
+  </header>">
+
+  <div class="chessboard-container">
   <table class="chessboard">
     <tr>
-        <td class="black" id="a8" style="color: darkviolet;">♜</td>
-        <td class="white" id="b8"style="color: darkviolet;">♞</td>
-        <td class="black" id="c8"style="color: darkviolet;">♝</td>
-        <td class="white" id="d8"style="color: darkviolet;">♛</td>
-        <td class="black" id="e8"style="color: darkviolet;">♚</td>
-        <td class="white" id="f8"style="color: darkviolet;">♝</td>
-        <td class="black" id="g8"style="color: darkviolet;">♞</td>
-        <td class="white" id="h8"style="color: darkviolet;">♜</td>
+        <td class="black" id="a8" style="color: rgb(224, 29, 39);">♜</td>
+        <td class="white" id="b8"style="color: rgb(224, 29, 39);">♞</td>
+        <td class="black" id="c8"style="color: rgb(224, 29, 39);">♝</td>
+        <td class="white" id="d8"style="color: rgb(224, 29, 39);">♛</td>
+        <td class="black" id="e8"style="color: rgb(224, 29, 39);">♚</td>
+        <td class="white" id="f8"style="color: rgb(224, 29, 39);">♝</td>
+        <td class="black" id="g8"style="color: rgb(224, 29, 39);">♞</td>
+        <td class="white" id="h8"style="color: rgb(224, 29, 39);">♜</td>
     </tr>
       <tr>
-        <td class="white" id="a7"style="color: darkviolet;">♟</td>
-        <td class="black" id="b7"style="color: darkviolet;">♟</td>
-        <td class="white" id="c7"style="color: darkviolet;">♟</td>
-        <td class="black" id="d7"style="color: darkviolet;">♟</td>
-        <td class="white" id="e7"style="color: darkviolet;">♟</td>
-        <td class="black" id="f7"style="color: darkviolet;">♟</td>
-        <td class="white" id="g7"style="color: darkviolet;">♟</td>
-        <td class="black" id="h7"style="color: darkviolet;">♟</td>
+        <td class="white" id="a7"style="color: rgb(224, 29, 39);">♟</td>
+        <td class="black" id="b7"style="color: rgb(224, 29, 39);">♟</td>
+        <td class="white" id="c7"style="color: rgb(224, 29, 39);">♟</td>
+        <td class="black" id="d7"style="color: rgb(224, 29, 39);">♟</td>
+        <td class="white" id="e7"style="color: rgb(224, 29, 39);">♟</td>
+        <td class="black" id="f7"style="color: rgb(224, 29, 39);">♟</td>
+        <td class="white" id="g7"style="color: rgb(224, 29, 39);">♟</td>
+        <td class="black" id="h7"style="color: rgb(224, 29, 39);">♟</td>
       </tr>
       <tr>
         <td class="black" ></td>
@@ -129,29 +143,26 @@
       </tr>
       <!-- ... Repeat rows for ranks 5 to 3 ... -->
       <tr>
-        <td class="black" style="color: darkgreen;">♙</td>
-        <td class="white" style="color: darkgreen;">♙</td>
-        <td class="black" style="color: darkgreen;">♙</td>
-        <td class="white" style="color: darkgreen;">♙</td>
-        <td class="black" style="color: darkgreen;">♙</td>
-        <td class="white" style="color: darkgreen;">♙</td>
-        <td class="black" style="color: darkgreen;">♙</td>
-        <td class="white" style="color: darkgreen;">♙</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♙</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♙</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♙</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♙</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♙</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♙</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♙</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♙</td>
       </tr>
       <tr>
-        <td class="white" style="color: darkgreen;">♖</td>
-        <td class="black" style="color: darkgreen;">♘</td>
-        <td class="white" style="color: darkgreen;">♗</td>
-        <td class="black" style="color: darkgreen;">♕</td>
-        <td class="white" style="color: darkgreen;">♔</td>
-        <td class="black" style="color: darkgreen;">♗</td>
-        <td class="white" style="color: darkgreen;">♘</td>
-        <td class="black" style="color: darkgreen;">♖</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♖</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♘</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♗</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♕</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♔</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♗</td>
+        <td class="white" style="color: rgb(8, 240, 8);">♘</td>
+        <td class="black" style="color: rgb(8, 240, 8);">♖</td>
       </tr>
-
-
 </table>
 </div>
-<br>
 </body>
 </html>
